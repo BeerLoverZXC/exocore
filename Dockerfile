@@ -25,7 +25,7 @@ ENV WALLET="wallet"
 ENV MONIKER="StakeShark"
 ENV CHAIN_ID="exocoretestnet_233-6"
 
-RUN wget -O exocored "https://github.com/ExocoreNetwork/exocore/releases/download/v${VERSION}/exocore_1.0.6_$(uname -s)_$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/').tar.gz" && \
+RUN wget -O exocored "https://github.com/ExocoreNetwork/exocore/releases/download/v1.0.6/exocore_1.0.6_$(uname -s)_$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/').tar.gz" && \
 tar -xvzf exocored.tar.gz && \
 rm -rf exocored.tar.gz && \
 mv bin/exocored $HOME/go/bin/
