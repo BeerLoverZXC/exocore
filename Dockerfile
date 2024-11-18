@@ -7,9 +7,11 @@ WORKDIR /app
 RUN apt-get update && \
 apt-get upgrade -y && \
 apt-get install jq build-essential curl git wget lz4 time bash -y && \
-curl -L https://foundry.paradigm.xyz | bash && \
-ENV PATH="$HOME/.foundry/bin:$PATH" && \
-foundryup
+curl -L https://foundry.paradigm.xyz | bash
+
+ENV PATH="$HOME/.foundry/bin:$PATH"
+
+RUN foundryup
 
 ENV GO_VER="1.22.5"
 
