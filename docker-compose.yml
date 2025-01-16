@@ -1,0 +1,18 @@
+services:
+  node-exocore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exocore-node
+    ports:
+      - "26656:26656"
+      - "26660:26660"
+    restart: unless-stopped
+    volumes:
+      - titan_volume:/app/.exocored
+      - ./entrypoint.sh:/app/entrypoint.sh
+      - exocore:/app/go
+
+volumes:
+  exocore_volume:
+  exocore_bin:
