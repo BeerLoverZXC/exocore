@@ -22,10 +22,10 @@ mkdir -p go/bin
 
 ENV PATH="/usr/local/go/bin:/app/go/bin:${PATH}"
 ENV WALLET="wallet"
-ENV MONIKER="StakeShark"
-ENV CHAIN_ID="exocoretestnet_233-6"
+ENV MONIKER="Stake Shark"
+ENV CHAIN_ID="exocoretestnet_233-7"
 
-RUN wget -O exocored.tar.gz "https://github.com/ExocoreNetwork/exocore/releases/download/v1.0.6/exocore_1.0.6_Linux_amd64.tar.gz" && \
+RUN wget -O exocored.tar.gz "https://github.com/ExocoreNetwork/exocore/releases/download/v1.0.8/exocore_1.0.8_Linux_amd64.tar.gz" && \
 tar -xvzf exocored.tar.gz && \
 rm -rf exocored.tar.gz && \
 mv bin/exocored $HOME/go/bin/
