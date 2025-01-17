@@ -9,9 +9,9 @@ services:
       - "26660:26660"
     restart: unless-stopped
     volumes:
-      - titan_volume:/app/.exocored
+      - exocore_volume:/app/.exocored
       - ./entrypoint.sh:/app/entrypoint.sh
-      - exocore:/app/go
+      - exocore_bin:/app/go
 
 volumes:
   exocore_volume:
